@@ -1,0 +1,5 @@
+# Visual Studio cache/options directory
+.vs/
+
+# Visual Studio build artifacts
+out/
