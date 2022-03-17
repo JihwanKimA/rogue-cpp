@@ -1,0 +1,269 @@
+/* config_cmake.h.in.  copy and past config.h.in file and then modify it to work with cmake.  */
+
+/* Define if scorefile is top scores, not top players */
+#cmakedefine ALLSCORES
+
+/* Define if checktime feature should be enabled */
+#cmakedefine CHECKTIME
+
+/* Define to group owner of setgid executable */
+#cmakedefine GROUPOWNER
+
+/* Define to 1 if you have the `alarm' function. */
+#cmakedefine HAVE_ALARM
+
+/* Define to 1 if you have the <arpa/inet.h> header file. */
+#cmakedefine HAVE_ARPA_INET_H
+
+/* Define to 1 if libcurses is requested */
+#cmakedefine HAVE_CURSES_H
+
+/* Define to 1 if you don't have `vprintf' but do have `_doprnt.' */
+#cmakedefine HAVE_DOPRNT
+
+/* Define to 1 if you have the `erasechar' function. */
+#cmakedefine HAVE_ERASECHAR
+
+/* Define if ncurses has ESCDELAY variable */
+#cmakedefine HAVE_ESCDELAY
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#cmakedefine HAVE_FCNTL_H
+
+/* Define to 1 if you have the `fork' function. */
+#cmakedefine HAVE_FORK
+
+/* Define to 1 if you have the `getgid' function. */
+#cmakedefine HAVE_GETGID
+
+/* Define to 1 if you have the `getloadavg' function. */
+#cmakedefine HAVE_GETLOADAVG
+
+/* Define to 1 if you have the `getpass' function. */
+#cmakedefine HAVE_GETPASS
+
+/* Define to 1 if you have the `getpwuid' function. */
+#cmakedefine HAVE_GETPWUID
+
+/* Define to 1 if you have the `getuid' function. */
+#cmakedefine HAVE_GETUID
+
+/* Define to 1 if you have the <inttypes.h> header file. */
+#cmakedefine HAVE_INTTYPES_H
+
+/* Define to 1 if you have the `killchar' function. */
+#cmakedefine HAVE_KILLCHAR
+
+/* Define to 1 if you have the <limits.h> header file. */
+#cmakedefine HAVE_LIMITS_H
+
+/* Define to 1 if you have the `loadav' function. */
+#cmakedefine HAVE_LOADAV
+
+/* Define to 1 if `lstat' has the bug that it succeeds when given the
+   zero-length file name argument. */
+#cmakedefine HAVE_LSTAT_EMPTY_STRING_BUG
+
+/* Define to 1 if you have the <memory.h> header file. */
+#cmakedefine HAVE_MEMORY_H
+
+/* Define to 1 if you have the `memset' function. */
+#cmakedefine HAVE_MEMSET
+
+/* Define to 1 if libncurses is requested */
+#cmakedefine HAVE_NCURSES_H
+
+/* Define to 1 if you have the <ncurses/term.h> header file. */
+#cmakedefine HAVE_NCURSES_TERM_H
+
+/* Define to 1 if you have the `nlist' function. */
+#cmakedefine HAVE_NLIST
+
+/* Define to 1 if you have the <nlist.h> header file. */
+#cmakedefine HAVE_NLIST_H
+
+/* Define to 1 if you have the <process.h> header file. */
+#cmakedefine HAVE_PROCESS_H
+
+/* Define to 1 if you have the <pwd.h> header file. */
+#cmakedefine HAVE_PWD_H
+
+/* Define to 1 if you have the `setenv' function. */
+#cmakedefine HAVE_SETENV
+
+/* Define to 1 if you have the `setgid' function. */
+#cmakedefine HAVE_SETGID
+
+/* Define to 1 if you have the `setregid' function. */
+#cmakedefine HAVE_SETREGID
+
+/* Define to 1 if you have the `setresgid' function. */
+#cmakedefine HAVE_SETRESGID
+
+/* Define to 1 if you have the `setresuid' function. */
+#cmakedefine HAVE_SETRESUID
+
+/* Define to 1 if you have the `setreuid' function. */
+#cmakedefine HAVE_SETREUID
+
+/* Define to 1 if you have the `setuid' function. */
+#cmakedefine HAVE_SETUID
+
+/* Define to 1 if you have the `spawnl' function. */
+#cmakedefine HAVE_SPAWNL
+
+/* Define to 1 if `stat' has the bug that it succeeds when given the
+   zero-length file name argument. */
+#cmakedefine HAVE_STAT_EMPTY_STRING_BUG
+
+/* Define to 1 if stdbool.h conforms to C99. */
+#cmakedefine HAVE_STDBOOL_H
+
+/* Define to 1 if you have the <stdint.h> header file. */
+#cmakedefine HAVE_STDINT_H
+
+/* Define to 1 if you have the <stdlib.h> header file. */
+#cmakedefine HAVE_STDLIB_H
+
+/* Define to 1 if you have the `strchr' function. */
+#cmakedefine HAVE_STRCHR
+
+/* Define to 1 if you have the `strerror' function. */
+#cmakedefine HAVE_STRERROR
+
+/* Define to 1 if you have the <strings.h> header file. */
+#cmakedefine HAVE_STRINGS_H
+
+/* Define to 1 if you have the <string.h> header file. */
+#cmakedefine HAVE_STRING_H
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#cmakedefine HAVE_SYS_IOCTL_H
+
+/* Define to 1 if you have the <sys/stat.h> header file. */
+#cmakedefine HAVE_SYS_STAT_H
+
+/* Define to 1 if you have the <sys/types.h> header file. */
+#cmakedefine HAVE_SYS_TYPES_H
+
+/* Define to 1 if you have the <sys/utsname.h> header file. */
+#cmakedefine HAVE_SYS_UTSNAME_H
+
+/* Define to 1 if you have the <termios.h> header file. */
+#cmakedefine HAVE_TERMIOS_H
+
+/* Define to 1 if you have the <term.h> header file. */
+#cmakedefine HAVE_TERM_H
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H
+
+/* Define to 1 if you have the <utmp.h> header file. */
+#cmakedefine HAVE_UTMP_H
+
+/* Define to 1 if you have the `vfork' function. */
+#cmakedefine HAVE_VFORK
+
+/* Define to 1 if you have the <vfork.h> header file. */
+#cmakedefine HAVE_VFORK_H
+
+/* Define to 1 if you have the `vprintf' function. */
+#cmakedefine HAVE_VPRINTF
+
+/* Define to 1 if `fork' works. */
+#cmakedefine HAVE_WORKING_FORK
+
+/* Define to 1 if `vfork' works. */
+#cmakedefine HAVE_WORKING_VFORK
+
+/* Define to 1 if the system has the type `_Bool'. */
+#cmakedefine HAVE__BOOL
+
+/* Define to 1 if you have the `_spawnl' function. */
+#cmakedefine HAVE__SPAWNL
+
+/* define if we should use program's load average function instead of system
+   */
+#cmakedefine LOADAV
+
+/* Define to file to use for scoreboard lockfile */
+#cmakedefine LOCKFILE
+
+/* Define to 1 if `lstat' dereferences a symlink specified with a trailing
+   slash. */
+#cmakedefine LSTAT_FOLLOWS_SLASHED_SYMLINK
+
+/* Define to include wizard mode */
+#cmakedefine MASTER
+
+/* Define if maxusers feature should be enabled */
+#cmakedefine MAXLOAD "@MAXLOAD@"
+
+/* Define if maxusers feature should be enabled */
+#cmakedefine MAXUSERS "@MAXUSERS@"
+
+/* kernel file to pass to nlist() when reading load average (unlikely to work)
+   */
+#cmakedefine NAMELIST "@NAMELIST@"
+
+/* word for the number of scores to store in scoreboard */
+#cmakedefine NUMNAME "@NUMNAME@"
+
+/* number of scores to store in scoreboard */
+#cmakedefine NUMSCORES "@NUMSCORES@"
+
+/* Define to the address where bug reports for this package should be sent. */
+#cmakedefine PACKAGE_BUGREPORT "@PACKAGE_BUGREPORT@"
+
+/* Define to the full name of this package. */
+#cmakedefine PACKAGE_NAME "@PACKAGE_NAME@"
+
+/* Define to the full name and version of this package. */
+#cmakedefine PACKAGE_STRING "@PACKAGE_STRING@"
+
+/* Define to the one symbol short name of this package. */
+#cmakedefine PACKAGE_TARNAME "@PACKAGE_TARNAME@"
+
+/* Define to the version of this package. */
+#cmakedefine PACKAGE_VERSION "@PACKAGE_VERSION@"
+
+/* Define crypt(3) wizard mode password */
+#cmakedefine PASSWD "@PASSWD@"
+
+/* Define as the return type of signal handlers (`int' or `void'). */
+#cmakedefine RETSIGTYPE "@RETSIGTYPE@"
+
+/* Define to file to use for scoreboard */
+#cmakedefine SCOREFILE "@SCOREFILE@"
+
+/* Define to 1 if you have the ANSI C header files. */
+#cmakedefine STDC_HEADERS
+
+/* Define to 1 if your <sys/time.h> declares `struct tm'. */
+#cmakedefine TM_IN_SYS_TIME
+
+/* define if we should use program's user counting function instead of
+   system's */
+#cmakedefine UCOUNT
+
+/* utmp like file to pass to ucount() when counting online users (unlikely to
+   work) */
+#cmakedefine UTMP "@UTMP@"
+
+/* Define to empty if `const' does not conform to ANSI C. */
+#cmakedefine const "@CONST@"
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#cmakedefine gid_t "@GID_T@"
+
+/* Define to `int' if <sys/types.h> does not define. */
+#cmakedefine pid_t "@PID_T@"
+
+/* Define to `unsigned int' if <sys/types.h> does not define. */
+#cmakedefine size_t "@SIZE_T@"
+
+/* Define to `int' if <sys/types.h> doesn't define. */
+#cmakedefine uid_t "@UID_T@"
+
+/* Define as `fork' if `vfork' does not work. */
+#cmakedefine vfork "@VFORK@"
