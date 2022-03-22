@@ -4,7 +4,7 @@
 cmake_minimum_required (VERSION 3.8)
 
 project ("rogue-cpp")
- 
+
 file(GLOB rogue_src
     "*.h"
     "*.c"
@@ -49,12 +49,15 @@ endif()
 # Do platform speficic
 if(WIN32)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
-
-    add_compile_definitions(ALLSCORES)
-    add_compile_definitions(MASTER)
-    add_compile_definitions(SCOREFILE="rogue54.scr")
-    add_compile_definitions(LOCKFILE="rogue54.lck")
 endif()
+
+# Add compile flags
+# It seems flags can be modified through passing variables to configure.
+# Before building sophiscated configuration mechanism like original had, we just enable important features for test.
+add_compile_definitions(ALLSCORES)
+add_compile_definitions(MASTER)
+add_compile_definitions(SCOREFILE="rogue.scr")
+add_compile_definitions(LOCKFILE="rogue.lck")
 
 # Add source to this project's executable.
 add_executable (rogue-cpp ${rogue_src})
