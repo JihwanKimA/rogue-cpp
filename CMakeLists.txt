@@ -49,6 +49,11 @@ endif()
 # Do platform speficic
 if(WIN32)
     add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+
+    add_compile_definitions(ALLSCORES)
+    add_compile_definitions(MASTER)
+    add_compile_definitions(SCOREFILE="rogue54.scr")
+    add_compile_definitions(LOCKFILE="rogue54.lck")
 endif()
 
 # Add source to this project's executable.
