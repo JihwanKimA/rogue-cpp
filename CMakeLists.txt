@@ -10,18 +10,24 @@ file(GLOB rogue_src
     "*.c"
 )
 
-# Determine curses backend based on platform
-if(WIN32)
-    set(CURSES_BACKEND "pdcurses")
-else()
-    set(CURSES_BACKEND "ncurses")
-endif()
-
-# Find curses library and includes, and do backend specific behaviour
-if(CURSES_BACKEND STREQUAL "pdcurses")
+# Find curses library and includes based on platform
+if(NOT MINGW AND CMAKE_SYSTEM_NAME STREQUAL "Windows" AND
+    NOT (CMAKE_SYSTEM_NAME STREQUAL "WindowsStore" OR CMAKE_SYSTEM_NAME STREQUAL "WindowsPhone")) #uwp
     find_path(PDCURSES_INCLUDES curses.h)
     find_library(PDCURSES_LIBRARIES pdcurses REQUIRED)
+    set(CURSES_BACKEND "pdcurses")
+elseif(MINGW OR NOT CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    set(CURSES_NEED_NCURSES TRUE)
+    find_package(Curses REQUIRED)
+    #It seems that FindCurses can't find debug version cause name has suffix
+    find_library(NCURSES_LIBRARIES_DEBUG NAMES ncurses_g)
+    set(CURSES_BACKEND "ncurses")
+else()
+    message(FATAL_ERROR "There are no supported curses implmentation!")
+endif()
 
+# Do backend specific
+if(CURSES_BACKEND STREQUAL "pdcurses")
     # Generate config.h, it is a only non-intrusive way to make it work 
     # below options are copied from extern.h - WIN32
     option(HAVE_CURSES_H "have curses.h" ON)
@@ -37,18 +43,11 @@ if(CURSES_BACKEND STREQUAL "pdcurses")
 
     add_compile_definitions(HAVE_CONFIG_H)
     add_compile_definitions(PDCURSES)
-elseif(CURSES_BACKEND STREQUAL "ncurses")
-    set(CURSES_NEED_NCURSES TRUE)
-    find_package(Curses REQUIRED)
-    #It seems that FindCurses can't find debug version cause name has suffix
-    find_library(NCURSES_LIBRARIES_DEBUG NAMES ncurses_g)
-else()
-    message(FATAL_ERROR "Unknown curses backend: '${CURSES_BACKEND}'")
 endif()
 
-# Do platform speficic
-if(WIN32)
-    add_definitions(-D_CRT_SECURE_NO_WARNINGS)
+# Do platform specific
+if(CMAKE_SYSTEM_NAME STREQUAL "Windows")
+    add_compile_definitions(_CRT_SECURE_NO_WARNINGS)
 endif()
 
 # Add compile flags
@@ -59,7 +58,7 @@ add_compile_definitions(MASTER)
 add_compile_definitions(SCOREFILE="rogue.scr")
 add_compile_definitions(LOCKFILE="rogue.lck")
 
-# Add source to this project's executable.
+# Add source to this project's executable
 add_executable (rogue-cpp ${rogue_src})
 
 # Link and include curses
