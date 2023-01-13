@@ -1,9 +1,10 @@
 {
-  "name": "rogue-cpp",
+  "name": "rogue-c",
   "version-string": "0.0.1",
   "port-version": 0,
-  "description": "c++ port of classic Rogue 5.4",
+  "description": "Rogue 5.4",
   "supports": "!uwp",
+  "builtin-baseline": "92225e6ce480662b29319d8e917d253976407247",
   "dependencies": [
     {
       "name": "pdcurses",
